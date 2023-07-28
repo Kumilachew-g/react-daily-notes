@@ -1,4 +1,5 @@
 import { Fab, Paper, TextField } from '@material-ui/core';
+import AddIcon from '@material-ui/icons/Add';
 
 function FormArea() {
   return (
@@ -12,7 +13,9 @@ function FormArea() {
           fullWidth
           autoComplete='off'
         />
-        <Fab />
+        <Fab style={{ marginTop: '20px' }}>
+          <AddIcon />
+        </Fab>
       </form>
     </Paper>
   );
