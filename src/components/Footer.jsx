@@ -1,7 +1,16 @@
 function Footer() {
   return (
     <div>
-      <p>Copyright &copy;</p>
+      <p
+        style={{
+          position: 'absolute',
+          bottom: '0',
+          width: '100%',
+          textAlign: 'center',
+        }}
+      >
+        Copyright &copy; {new Date().getFullYear()} Kumilachew Getie
+      </p>
     </div>
   );
 }
