@@ -6,7 +6,6 @@ import Note from './components/Note';
 
 function App() {
   const [notes, setNotes] = useState([]);
-  console.log(notes);
 
   function addNote(note) {
     setNotes((prevNotes) => {
@@ -17,9 +16,9 @@ function App() {
     <div>
       <Header />
       <FormArea addNote={addNote} />
-      <Note />
-      <Note />
-      <Note />
+      {notes.map((note) => (
+        <Note title={note.title} content={note.content} />
+      ))}
       <Footer />
     </div>
   );

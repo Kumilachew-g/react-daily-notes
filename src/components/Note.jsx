@@ -1,6 +1,6 @@
 import { Paper } from '@material-ui/core';
 
-function Note() {
+function Note({ title, content }) {
   return (
     <Paper
       style={{
@@ -12,8 +12,8 @@ function Note() {
       }}
     >
       <div>
-        <h1>Title</h1>
-        <p>Content</p>
+        <h1>{title}</h1>
+        <p>{content}</p>
       </div>
     </Paper>
   );
