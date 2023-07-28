@@ -12,12 +12,25 @@ function App() {
       return [...prevNotes, note];
     });
   }
+
+  function deleteNote(id) {
+    setNotes((prevNotes) => {
+      return prevNotes.filter((note, index) => {
+        return index !== id;
+      });
+    });
+  }
   return (
     <div>
       <Header />
       <FormArea addNote={addNote} />
-      {notes.map((note) => (
-        <Note title={note.title} content={note.content} />
+      {notes.map((note, index) => (
+        <Note
+          id={index}
+          deleteNote={deleteNote}
+          title={note.title}
+          content={note.content}
+        />
       ))}
       <Footer />
     </div>

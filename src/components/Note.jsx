@@ -1,6 +1,10 @@
-import { Paper } from '@material-ui/core';
+import { Button, Paper } from '@material-ui/core';
+import DeleteIcon from '@material-ui/icons/Delete';
 
-function Note({ title, content }) {
+function Note({ title, content, id, deleteNote }) {
+  function clickHandler() {
+    deleteNote(id);
+  }
   return (
     <Paper
       style={{
@@ -15,6 +19,9 @@ function Note({ title, content }) {
         <h1>{title}</h1>
         <p>{content}</p>
       </div>
+      <Button onClick={clickHandler} style={{ marginLeft: '120px' }}>
+        <DeleteIcon style={{ color: 'red' }} />
+      </Button>
     </Paper>
   );
 }
