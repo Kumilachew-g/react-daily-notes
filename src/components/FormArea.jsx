@@ -1,7 +1,12 @@
 import { Fab, Paper, TextField } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
+import { useState } from 'react';
 
 function FormArea() {
+  const [note, setNote] = useState({
+    title: '',
+    content: '',
+  });
   return (
     <Paper style={{ margin: '10px 10%', padding: '25px 50px' }}>
       <form>
