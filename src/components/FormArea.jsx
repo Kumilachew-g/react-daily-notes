@@ -2,11 +2,19 @@ import { Fab, Paper, TextField } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import { useState } from 'react';
 
-function FormArea() {
+function FormArea({ addNote }) {
   const [note, setNote] = useState({
     title: '',
     content: '',
   });
+
+  function clickHandler() {
+    addNote(note);
+    setNote({
+      title: '',
+      content: '',
+    });
+  }
 
   function changeHandler(e) {
     const { name, value } = e.target;
@@ -17,7 +25,7 @@ function FormArea() {
       };
     });
   }
-  console.log(note);
+  // console.log(note);
   return (
     <Paper style={{ margin: '10px 10%', padding: '25px 50px' }}>
       <form>
@@ -39,7 +47,7 @@ function FormArea() {
           fullWidth
           autoComplete='off'
         />
-        <Fab style={{ marginTop: '20px' }}>
+        <Fab onClick={clickHandler} style={{ marginTop: '20px' }}>
           <AddIcon />
         </Fab>
       </form>
