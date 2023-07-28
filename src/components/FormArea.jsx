@@ -1,4 +1,4 @@
-import { Paper, TextField } from '@material-ui/core';
+import { Fab, Paper, TextField } from '@material-ui/core';
 
 function FormArea() {
   return (
@@ -12,6 +12,7 @@ function FormArea() {
           fullWidth
           autoComplete='off'
         />
+        <Fab />
       </form>
     </Paper>
   );
