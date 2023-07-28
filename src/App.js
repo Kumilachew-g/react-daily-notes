@@ -7,6 +7,8 @@ function App() {
     <div>
       <Header />
       <Note />
+      <Note />
+      <Note />
       <Footer />
     </div>
   );
