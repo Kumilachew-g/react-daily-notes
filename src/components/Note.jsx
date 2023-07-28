@@ -8,10 +8,13 @@ function Note() {
         minHeight: '100px',
         padding: '10px',
         margin: '20px',
+        display: 'inline-flex',
       }}
     >
-      <h1>Title</h1>
-      <p>Content</p>
+      <div>
+        <h1>Title</h1>
+        <p>Content</p>
+      </div>
     </Paper>
   );
 }
