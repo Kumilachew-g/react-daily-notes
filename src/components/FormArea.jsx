@@ -7,12 +7,33 @@ function FormArea() {
     title: '',
     content: '',
   });
+
+  function changeHandler(e) {
+    const { name, value } = e.target;
+    setNote((prev) => {
+      return {
+        ...prev,
+        [name]: value,
+      };
+    });
+  }
+  console.log(note);
   return (
     <Paper style={{ margin: '10px 10%', padding: '25px 50px' }}>
       <form>
-        <TextField label='title' fullWidth autoComplete='off' />
         <TextField
+          onChange={changeHandler}
+          label='title'
+          name='title'
+          value={note.title}
+          fullWidth
+          autoComplete='off'
+        />
+        <TextField
+          onChange={changeHandler}
           label='content'
+          name='content'
+          value={note.content}
           multiline
           rows={4}
           fullWidth
