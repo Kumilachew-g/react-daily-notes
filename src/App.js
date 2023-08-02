@@ -30,6 +30,7 @@ function App() {
           deleteNote={deleteNote}
           title={note.title}
           content={note.content}
+          key={index}
         />
       ))}
       <Footer />

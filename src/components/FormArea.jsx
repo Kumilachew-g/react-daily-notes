@@ -43,7 +43,7 @@ function FormArea({ addNote }) {
           name='content'
           value={note.content}
           multiline
-          rows={4}
+          minRows={4}
           fullWidth
           autoComplete='off'
         />
